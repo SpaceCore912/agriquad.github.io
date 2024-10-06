@@ -1,0 +1,224 @@
+<html><head><base href="https://agridata.io/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriData: Empowering Farmers with Data-Driven Insights</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #FFA000;
+        --text-color: #333;
+        --bg-color: #F5F5F5;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    nav {
+        background-color: var(--secondary-color);
+        padding: 0.5rem;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 1rem;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .hero {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .features {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .feature {
+        flex-basis: 30%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cta {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: #45a049;
+    }
+    
+    footer {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+        .features {
+            flex-direction: column;
+        }
+        
+        .feature {
+            flex-basis: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>AgriData</h1>
+        <p>Empowering Farmers with Data-Driven Insights</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#data-sources">Data Sources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="hero">
+            <h2>Revolutionizing Agriculture with NASA Harvest Data</h2>
+            <p>AgriData provides innovative solutions that empower farmers to leverage data-driven insights from trusted resources, including NASA Harvest.</p>
+        </section>
+        
+        <section id="features" class="features">
+            <div class="feature">
+                <h3>Easy Data Access</h3>
+                <p>Find critical agricultural data in the easiest and fastest way possible, tailored to your specific needs.</p>
+            </div>
+            <div class="feature">
+                <h3>Disaster Preparedness</h3>
+                <p>Identify potential disaster events based on historical data, helping you stay one step ahead in protecting your crops.</p>
+            </div>
+            <div class="feature">
+                <h3>Crop Intelligence</h3>
+                <p>Access detailed information about crops, including planting requirements, necessary equipment, and global market demand.</p>
+            </div>
+        </section>
+        
+        <section id="data-sources" class="cta">
+            <h2>Trusted Data Sources</h2>
+            <p>We collaborate with NASA Harvest and other reputable organizations to bring you the most accurate and up-to-date agricultural data.</p>
+            <a href="#" class="btn">Explore Our Data</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 AgriData. All rights reserved.</p>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Simple animation for features
+    const features = document.querySelectorAll('.feature');
+    features.forEach((feature, index) => {
+        setTimeout(() => {
+            feature.style.opacity = '0';
+            feature.style.transform = 'translateY(20px)';
+            feature.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                feature.style.opacity = '1';
+                feature.style.transform = 'translateY(0)';
+            }, 100 * index);
+        }, 500);
+    });
+
+    // Add a data visualization placeholder
+    const dataVisualization = document.createElement('div');
+    dataVisualization.id = 'data-visualization';
+    dataVisualization.style.width = '100%';
+    dataVisualization.style.height = '300px';
+    dataVisualization.style.backgroundColor = '#e0e0e0';
+    dataVisualization.style.marginTop = '2rem';
+    dataVisualization.style.borderRadius = '8px';
+    dataVisualization.style.display = 'flex';
+    dataVisualization.style.justifyContent = 'center';
+    dataVisualization.style.alignItems = 'center';
+    dataVisualization.style.fontSize = '1.2rem';
+    dataVisualization.style.fontWeight = 'bold';
+    dataVisualization.textContent = 'Interactive Data Visualization Coming Soon';
+
+    document.querySelector('main').appendChild(dataVisualization);
+
+    // Add hover effect to CTA button
+    const ctaButton = document.querySelector('.btn');
+    ctaButton.addEventListener('mouseover', () => {
+        ctaButton.style.transform = 'scale(1.05)';
+        ctaButton.style.transition = 'transform 0.3s ease';
+    });
+    ctaButton.addEventListener('mouseout', () => {
+        ctaButton.style.transform = 'scale(1)';
+    });
+});
+</script>
+<py-config>packages=["folium"]</py-config>
+<py-script>
+    m=folium.Map(location=[38.8831° N, 77.0163° W])
+    print(m)
+</py-script>
+</body>
+</html>
